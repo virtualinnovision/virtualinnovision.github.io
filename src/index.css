@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-blue: #00f2ff;
+  --color-silver: #c0c0c0;
+  --color-anthracite: #121212;
+  --font-display: "Space Grotesk", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white selection:bg-neon-blue selection:text-black;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+.circuit-line {
+  background: linear-gradient(90deg, transparent, var(--color-neon-blue), transparent);
+  height: 1px;
+  width: 100%;
+  position: absolute;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--color-neon-blue);
+  background: rgba(0, 242, 255, 0.05);
+}
+
+.neon-glow {
+  text-shadow: 0 0 10px rgba(0, 242, 255, 0.5), 0 0 20px rgba(0, 242, 255, 0.3);
+}
+
+.neon-border {
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+}
